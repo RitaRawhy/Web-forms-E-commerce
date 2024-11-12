@@ -1,0 +1,375 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="script.js"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 282px;
+        }
+        .auto-style2 {
+            width: 318px;
+        }
+        .auto-style3 {
+            width: 359px;
+        }
+        .auto-style4 {
+            width: 265px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+         <div id="main">
+
+  
+   <div class="icon_bar">
+    <p>Nitro Shop</p> 
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="WishList.aspx"><ion-icon name="heart-outline"></ion-icon></a>
+        <a href="cart.aspx"><ion-icon name="cart-outline"></ion-icon></a>
+        <a href="#"><ion-icon name="id-card"></ion-icon> My Account</a>
+        <a href="#"><ion-icon name="location"></ion-icon>Our Stores</a>
+        <a id="login" ><ion-icon name="person-circle-outline"></ion-icon>   Log In</a>
+      </div>
+
+  
+<div class="animator"></div>
+  <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+
+    <a   class="tablinks"  onclick="openCity(event, 'tokyo')" href="HomePage.aspx">Home page</a>
+    <a class="tablinks" onclick="openCity(event, 'Muscle-building')" href ="Muscle-building.aspx">Muscle-building</a>
+    <a   class="tablinks" onclick="openCity(event, 'Paris')"href="Weight-Gaining.aspx">Weight-Gaining</a>
+    <a class="tablinks" onclick="openCity(event, 'Tokyo')" href="Weight-Loss.aspx">Weight-Loss</a>
+    <a  class="tablinks" onclick="openCity(event, 'pre-workout')"href="Pre-Workout.aspx"> Pre-Workout</a>
+    <a class="tablinks" onclick="openCity(event, 'Accessories')" href="Accessories.aspx">Accessories</a>
+
+    
+</div>
+             <input type="button" value="☰ Menu" class="openbtn" onclick="openNav()"/>
+  
+  
+   <div class="search2">
+       <asp:TextBox runat="server" ID="TextBox1" type="search" class="search" placeholder="search.."   ></asp:TextBox>
+       <asp:Button runat="server" type="submit " ID="btsearh" CssClass="btnsearch" Text="Search" OnClick="btsearh_Click"  ></asp:Button>
+     </div>
+
+
+
+
+
+
+
+<!-- Tab content -->
+<div id="tokyo" class="tabcontent" >
+</div>
+  <div id="Muscle-building" class="tabcontent">
+  <h3>Muscle-building</h3>
+  <p>London is the capital city of England.</p>
+</div>  
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+  
+  <div id="pre-workout" class="tabcontent">
+  <h3>pre-workout</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
+
+  <div id="Accessories" class="tabcontent">
+  <h3>Accessories</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+
+
+    window.onload = function () {
+        var a = document.getElementById("login");
+        a.onclick = function openForm() {
+
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("main").style.opacity =
+                "0.3";
+
+        }
+        var b = document.getElementById("REGISTER");
+        b.onclick = function OpenForm() {
+
+            document.getElementById("MyForm").style.display = "block";
+            document.getElementById("main").style.opacity =
+                "0.3";
+
+        }
+
+
+        var c = document.getElementById("login2");
+        c.onclick = function openForm() {
+
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("main").style.opacity =
+                "0.3";
+            document.getElementById("MyForm").style.display = "none";
+
+
+        }
+
+        var d = document.getElementById("PAY");
+        d.onclick = function () {
+
+            document.getElementById("PAYMENT").style.display = "block";
+            document.getElementById("main").style.opacity =
+                "0.3";
+
+
+
+        }
+
+
+
+    }
+
+
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("main").style.opacity = "1";
+        document.getElementById("MyForm").style.display = "none";
+        document.getElementById("PAYMENT").style.display = "none";
+    }
+
+    function backlogin() {
+        document.getElementById("myForm").style.display = "block";
+        document.getElementById("main").style.opacity =
+            "0.3";
+        document.getElementById("PAYMENT").style.display = "none";
+    }
+
+    function CONFIRM() {
+        document.getElementById("DEMO").innerHTML = "The process is confirmed successfully.";
+    }
+
+
+</script>
+
+              <script>
+                  (function (d, t) {
+                      var BASE_URL = "https://app.chatwoot.com";
+                      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                      g.src = BASE_URL + "/packs/js/sdk.js";
+                      g.defer = true;
+                      g.async = true;
+                      s.parentNode.insertBefore(g, s);
+                      g.onload = function () {
+                          window.chatwootSDK.run({
+                              websiteToken: 'WDHStZo6dKX5E9tDYhEYkkAg',
+                              baseUrl: BASE_URL
+                          })
+                      }
+                  })(document, "script");
+    </script>
+    
+  
+
+             </div>
+
+  <div class="form-popup" id="myForm">
+ 
+    <h1>Login</h1>
+
+   <label for="email"><b>Email</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="Logemail" ErrorMessage="   * Please Enter Your Email" Font-Size="Small" ForeColor="Red" ValidationGroup="Login" Font-Bold="True" Display="Dynamic">
+                                               </asp:RequiredFieldValidator>
+          <asp:TextBox runat="server" ID="Logemail" type="text" placeholder="Enter Email" name="psw" ></asp:TextBox>
+
+    <label for="psw"><b>Password</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="LogPass" ErrorMessage="   * Please Enter Your Password" Font-Size="Small" ForeColor="Red" ValidationGroup="Login" Font-Bold="True" Display="Dynamic">
+                                               </asp:RequiredFieldValidator>
+          <asp:TextBox runat="server" ID="LogPass" type="password" placeholder="Enter Password" name="psw" ></asp:TextBox>
+   
+
+    <asp:Button runat="server" Text="Log In" type="submit" CssClass="btn" OnClick="Unnamed6_Click" CausesValidation="true" ValidationGroup="Login" ></asp:Button>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+   
+
+     <a href="#" id="REGISTER"  >
+       <h5>Don't have an account !!  Register Now .</h5> 
+     </a>
+     
+</div>
+
+   <div class="form-popup" id="MyForm">
+ 
+       <h1>Register</h1>
+
+    <label for="name"><b>First Name</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="first_name" ErrorMessage="   * Please Enter Your First Name" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                               </asp:RequiredFieldValidator>   
+    <asp:TextBox runat="server" ID="first_name" type="text" placeholder="Enter First Name" name="name"  ></asp:TextBox>
+         
+    <label for="name"><b>Last Name</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="last_name" ErrorMessage="   * Please Enter Your Last Name" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                              </asp:RequiredFieldValidator>   
+    <asp:TextBox runat="server" ID="last_name" type="text" placeholder="Enter Last Name" name="name" ></asp:TextBox>
+
+
+    <label for="name"><b>Address</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="address" ErrorMessage="   * Please enter your address" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                            </asp:RequiredFieldValidator>   
+    <asp:TextBox runat="server" ID="address" type="text" placeholder="Enter Your Address" name="address" ></asp:TextBox>
+
+
+    <label for="number"><b>Phone Number</b></label><asp:RequiredFieldValidator runat="server"  
+        ControlToValidate="phone" ErrorMessage="   * Please enter your phone number" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                                   </asp:RequiredFieldValidator>   
+    <asp:TextBox runat="server" ID="phone" type="text" placeholder="Enter Your Number" name="phone" ></asp:TextBox>
+   
+
+     <label for="email"><b>Email</b></label><asp:RequiredFieldValidator runat="server" 
+         ControlToValidate="email" ErrorMessage="   * Please enter your email" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                            </asp:RequiredFieldValidator>
+       <asp:RegularExpressionValidator runat="server" ControlToValidate="email" ErrorMessage=" * Input valid email address!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic"></asp:RegularExpressionValidator> 
+    <asp:TextBox runat="server" ID="email" type="text" placeholder="Enter Email" name="email" ></asp:TextBox> 
+
+
+    <label for="psw"><b>Password</b></label><asp:RequiredFieldValidator runat="server"
+        ControlToValidate="password" ErrorMessage="   * Please enter a password" Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic">
+                                            </asp:RequiredFieldValidator>
+    
+    <asp:TextBox runat="server" ID="password" type="password" placeholder="Enter Password" name="psw" ></asp:TextBox>
+
+    <label for="psw"><b> Confirm Password</b></label><asp:CompareValidator runat="server"
+        ErrorMessage=" * wrong confirmation" ControlToValidate="confirmpassword" ControlToCompare="password" 
+        Font-Size="Small" ForeColor="Red" ValidationGroup="Registeration" Font-Bold="True" Display="Dynamic"></asp:CompareValidator>  
+    <asp:TextBox runat="server" ID="confirmpassword"  type="password" placeholder="Confirm Your  Password" name="psw" ></asp:TextBox>
+
+    <asp:Button runat="server" Text="Register" type="submit" CssClass="btn" OnClick="Unnamed5_Click"  CausesValidation="true" ValidationGroup="Registeration"></asp:Button>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+
+     <a href="#" id="login2"  >
+     <h5>Already have an account !!  Log In .</h5>
+     </a>
+</div>
+
+  <div class="form-popup" id="PAYMENT">
+    <h1 style="text-align:center">Payment</h1>
+    <label for="phone"><b>Phone Number</b></label>
+    <label for="address"><b>Address</b></label>
+    <label for="productname"><b>Product Name</b></label>
+    <label for="totalprice"><b>Total Price</b></label>
+    <button type="button" class="btn cancel" onclick="CONFIRM()" >Confirm</button>
+    <button type="button" class="btn cancel" onclick="backlogin()">Go Back</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <br>
+    <p id="DEMO" style="font-weight:bold"></p>
+   
+    
+  </div>
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+            <div class="footer">
+      <table>
+  <tbody><tr>
+    <th class="auto-style1">Customer Service</th>
+    <th class="auto-style2">About Us</th>
+    <th class="auto-style3">Main Categories</th>
+    <th class="auto-style4">Social Media</th>
+  </tr>
+
+
+
+  <tr>
+    <td class="auto-style1">
+        <ul>
+            <li><a href="#">Call Me</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </td>
+
+
+
+    <td class="auto-style2">
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Stores</a></li>
+            <li><a href="#">Careers</a> </li>
+        </ul>
+    </td>
+    <td class="auto-style3">
+        <ul>
+            <li><a href="Muscle-building.aspx">Muscle Building</a></li>
+            <li><a href="Weight-Gaining.aspx">Weight Gaining</a></li>
+            <li><a href="Weight-Loss.aspx">Weight Loss</a></li>
+            <li><a href="Pre-Workout.aspx">Pre-Workout</a></li>
+            <li><a href="Accessories.aspx">Accessories</a></li>
+        </ul>
+    </td>
+    <td class="auto-style4"><a href="#"><ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon></a>  
+      <a href="#"><ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon></a></td>
+  </tr>
+  
+</tbody></table>
+    </div>
+
+    </form>
+</body>
+</html>

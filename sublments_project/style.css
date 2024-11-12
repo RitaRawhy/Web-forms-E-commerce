@@ -1,0 +1,404 @@
+body
+{
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#main 
+{
+  padding: 0;
+  margin: 0;
+}
+
+.icon_bar 
+{
+  width: 100%;
+  background-color: red;
+  overflow: auto;
+  
+
+}
+
+.icon_bar a 
+{
+  float: right;
+  padding: 20px;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 17px;
+}
+ .icon_bar p
+{
+  font-weight: bold ;
+  color: #FFF ; 
+  float: left;
+  margin-left: 15px ; 
+  font-size: 20px;
+}
+
+.icon_bar a:hover{
+  cursor:pointer;
+  background-color:red;
+}
+
+.animator
+    {
+
+     border-radius:10px;
+      background-repeat:no-repeat;
+      width:800px;
+      height:300px;
+      background-size:cover;
+      margin-left:260px;
+     animation:slider 16s infinite;
+     margin-bottom:50px;
+      margin-top:10px;
+    }
+    @keyframes slider
+    {
+        0%{background-image:url(pro7.jpg);}
+        20%{background-image:url(pro6.jpg);}
+              40%{background-image:url(pro3.jpg);}
+        60%{background-image:url(pro4.jpg);}
+              80%{background-image:url(pro5.jpg);}
+        100%{background-image:url(pro7.jpg);}
+      
+    }
+.search
+{
+  border: solid 2px red;
+      border-radius:5px;
+      display:inline; 
+  margin-left:320px;
+  width:600px;
+  height:50px;
+  font-size:20px;
+}
+.bubestseller
+{
+  position:relative;
+    margin:50px;
+ background-color:white;
+padding:10px;
+   border-radius:10px;
+cursor:pointer;
+  display:inline;
+    margin-left:100px;
+    border: solid 2px red;
+
+
+}
+.bestseller
+{
+ 
+  height:400px;
+ 
+}
+
+.bestseller img
+{
+height:300px;
+}
+.bestseller:hover
+{
+ 
+background-color:white;
+   transform: scale(1.2);
+
+     border-radius:10px;
+
+     border: solid 2px black;
+
+}
+.type
+{
+  font-weight:bold;
+  background-color:red;
+  font-size:20px;
+    margin-top:50px;
+  
+padding:10px;
+  color:white;
+
+}
+
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:red;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: gray;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-left:20px;
+}
+
+.openbtn:hover {
+  background-color: #ff5c5c;
+}
+
+
+#main {
+  transition: margin-left .5s;
+ 
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+
+.tag1
+{
+  position: absolute;
+  top: 30px;
+  left: 1px;
+  transform-origin: left;
+  transform: rotate(-20deg);
+  color: #FFF;
+  padding: 5px 5px;
+  width: 100px;
+  font-size: 15px;
+  text-align: center;
+  background: red;
+  user-select: none;
+  
+}
+
+
+
+.footer
+{
+  background: red;
+  border-radius:5px;
+  padding: 0;
+}
+
+table
+{
+   margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+table td
+{
+    text-align: center;
+    padding-right: 35px;
+}
+
+table ul
+{
+    list-style: none;
+}
+
+table a
+{
+    text-decoration: none;
+    color: white;
+}
+
+table th
+{
+  color:white;
+}
+
+table a:hover
+{
+    color: #dad7d7;
+}
+
+
+
+
+
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 2000px;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.form-popup {
+  display: none;
+  position:fixed;
+  bottom: 150px;
+  right: 400px;
+  border: 3px solid lighten;
+  z-index: 9;
+width:600;
+  height:400;
+    background-color: white;
+     border-radius:10px;
+  overflow:auto;
+}
+
+
+.form-popup {
+ 
+  margin:auto;
+  padding: 50px;
+   height:400px;
+  width:600px;
+}
+
+
+.form-popup input[type=text], .form-popup input[type=password] {
+  width: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  display:block;
+  background: #f1f1f1;
+}
+
+
+.form-popup input[type=text]:focus, .form-popupinput[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-popup .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  margin:10px;
+  opacity: 1;
+     border-radius:5px;
+}
+
+
+.form-popup .cancel {
+  background-color: red;
+}
+
+
+.form-popup .btn:hover, .open-button:hover {
+  opacity: 0.6;
+}
+
+.form-popup a{
+  text-decoration: none;
+  color: black;
+}
+
+.form-popup a:hover{
+  color: gray;
+}
+
+#PAYMENT label{
+  display: block;
+  padding: 20px;
+}
+
+#PAYMENT button{
+  margin: 30px;
+}
+
+
+.btnsearch
+{
+    background-color: red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 1;
+     border-radius:5px;
+}
+
+.btnsearch:hover
+{
+  background-color:#ff5c5c;
+}
+
